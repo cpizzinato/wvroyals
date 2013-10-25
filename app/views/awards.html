@@ -1,0 +1,56 @@
+<div id="awardspage" ng-controller="AwardsCtrl">
+  <div class="menu">
+	<div class="wrap">	
+		<a href="/" class="logo" style="top: 20.333333333333332px; left: 0px;">
+			<img src="images/logo_blue.jpg" width="40" height="40" border="0">
+		</a>
+		<a href="/news" class="tab"><span>
+				NEWS
+		 
+		</span><div class="blenda2 anim4"></div></a>
+		<a href="/club" class="tab"><span>
+				CLUB
+		 
+		</span><div class="blenda2 anim4"></div></a>
+		<a href="/results" class="tab"><span>
+				RESULTS &amp; SCHEDULE
+		 
+		</span><div class="blenda2 anim4"></div></a>
+		<a href="/team" class="tab"><span>
+				TEAM
+		 
+		</span><div class="blenda2 anim4"></div></a>
+		<a href="/media" class="tab"><span>
+				GALLERY
+		 
+		</span><div class="blenda2 anim4"></div></a>
+		<a href="/awards" class="tab active"><span>
+				AWARDS
+		 
+		</span><div class="blenda2 anim4"></div></a>
+				
+	 </div>
+  </div>	
+	
+  <div class="media">
+    <div class="content wrap">
+    <h1>
+			Awards
+	  </h1>
+	  <img src="/images/results/delim2.png" width="986" height="1" border="0" class="delim">
+	  <div class="clear"></div>
+	  <img src="/imgs/media/delim.png" width="986" height="1" border="0" class="delim">
+		
+	  <div class="box">
+        <h2>VMSL</h2>
+        <ul>
+          <li ng-repeat="vmslAwards in vmsl">{{vmslAwards}}</li>
+        </ul>
+        <h2>NSSL</h2>
+        <ul>
+          <li ng-repeat="nsslAwards in nssl">{{nsslAwards}}</li>
+        </ul>
+		<div class="clear"></div>
+	  </div>		
+   </div>
+</div>

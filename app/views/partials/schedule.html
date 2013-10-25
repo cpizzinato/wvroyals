@@ -1,0 +1,26 @@
+<div class="tab schedule" ng-repeat="game in schedule">
+	<div class="box" >
+
+		<div class="left">
+			<h2>{{game.date | moment: 'YYYY-MM-DD HH:mm:ss': 'ddd MMM DD, YYYY hh:mm A'}}</h2>
+			<h3>{{game.loc}} </h3>
+			<a href="{{game.mapUrl}}" class="web anim4" target="_blank">
+				map
+			</a>
+		</div>
+        <table class="schedule">
+          <tr><td>Home</td><td></td><td>Away</td></tr>
+          <tr>
+            <td>{{game.home}}</td>
+            <td ng-hide="game.score">VS</td>
+            <td ng-show="game.score">{{game.score}}</td>
+            <td>{{game.away}}</td>
+          </tr>
+        </table>
+		<div class="clear"></div>
+	
+	</div>
+
+	<img src="/images/results/delim2.png" width="986" height="1" border="0" class="delim">
+  
+</div><!--schedule -->

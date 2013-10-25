@@ -1,0 +1,33 @@
+<div class="tab ranking">
+	<div>
+		<table class="box">
+			<tr>
+				<td class="tableCell team"><h3>Team</h3></td>
+				<td class="tableCell"><h3>PTS</h3></td>
+				<td class="tableCell"><h3>PLD</h3></td>
+				<td class="tableCell"><h3>W</h3></td>
+				<td class="tableCell"><h3>T</h3></td>
+				<td class="tableCell"><h3>L</h3></td>
+				<td class="tableCell"><h3>GF</h3></td>
+				<td class="tableCell"><h3>GA</h3></td>
+			</tr>
+			<tr>
+				<td colspan="8"><img src="/images/results/delim2.png" width="986" height="1" border="0" class="delim"></td>
+			</tr>
+			<tr class="teamRow" ng-class="getClass(team)" ng-repeat-start="team in teams">
+				<td class="tableCell team">{{team.team}}</td>
+				<td class="tableCell">{{team.pts}}</td>
+				<td class="tableCell">{{team.pld}}</td>
+				<td class="tableCell">{{team.w}}</td>
+				<td class="tableCell">{{team.t}}</td>
+				<td class="tableCell">{{team.l}}</td>
+				<td class="tableCell">{{team.gf}}</td>
+				<td class="tableCell">{{team.ga}}</td>
+				<tr ng-repeat-end="">
+					<td colspan="8"><img src="/images/results/delim2.png" width="986" height="1" border="0" class="delim"></td>
+				</tr>
+			</tr>
+		</table>
+	</div>		
+	<div class="clear"></div>
+</div><!--ranking-->
