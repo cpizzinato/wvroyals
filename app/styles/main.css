@@ -1154,6 +1154,18 @@ a {
   z-index:1;
 }
 
+#homepage img.bg.lrg {
+  top: -44px;
+  left: 0px;
+}
+
+#homepage .box img.bg {
+  width: 292px; 
+  height: 219px; 
+  top: -18px; 
+  left: 0px;
+}
+
 #homepage .box.twitter {
   background:#2980b9;
   z-index:2;
