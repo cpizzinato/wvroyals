@@ -18,5 +18,8 @@
     "angular-mocks": "~1.0.7",
     "angular-scenario": "~1.0.7",
     "jquery": "~2.0.3"
+  },
+  "resolutions": {
+    "angular": "1.2.0-rc.1"
   }
 }

@@ -29,6 +29,12 @@ app.controller('MainCtrl', function($scope, $window) {
   setView($window.innerWidth);
 });
 
+app.controller('MenuCtrl', function($scope, $routeParams, $location) {
+  var loc = $location.path().substr(1,$location.path().length);
+  angular.element('a.active').removeClass('active');
+  angular.element('a#'+loc).addClass('active');
+});
+
 app.controller('MobileCtrl', function($scope) {
 });
 
