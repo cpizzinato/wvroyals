@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('westvanfcApp', ['ngResource', 'ngAnimate', 'ngRoute', 'wu.masonry'])
+var app = angular.module('westvanfcApp', ['ngResource', 'ngAnimate', 'ngRoute', 'wu.masonry', 'ngProgressLite'])
   .config(function ($routeProvider, $locationProvider) {
     $routeProvider
       .when('/', {

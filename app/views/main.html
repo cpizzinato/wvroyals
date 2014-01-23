@@ -1,1 +1,21 @@
-<div ng-include src="viewTemplate"></div>
+<div class="container" ng-controller="HomeCtrl">
+ <h2 class="royalsBlue">West Van Royals</h2>
+    <div class="card">
+    	<next-game class="nextGame"></next-game>
+	</div>
+    <div class="card">
+        <h2>Point Leaders</h2>
+        <ul>
+            <li class="player" ng-repeat="leader in leaders">
+              <img src="images/team/{{leader.imageKey}}">
+              <br>
+              <div class="stats">
+                <span class="stats-icon goal"></span>{{leader.gol}}
+              </div>
+            </li>
+        </ul>
+        <br>
+        <div><a href="/team">See all players</a></div>
+    </div>
+    <standings-widget></standings-widget>
+</div>

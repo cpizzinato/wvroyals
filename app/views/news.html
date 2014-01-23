@@ -1,68 +1,31 @@
 <div id="newspage" ng-controller="NewsCtrl">
-  <div class="menu">
-	<div class="wrap">	
-		<a href="/" class="logo" style="top: 20.333333333333332px; left: 0px;">
-			<img src="images/logo_blue.jpg" width="40" height="40" border="0">
-		</a>
-		<a href="/news" class="tab active"><span>
-				NEWS
-		 
-		</span><div class="blenda2 anim4"></div></a>
-		<a href="/club" class="tab"><span>
-				CLUB
-		 
-		</span><div class="blenda2 anim4"></div></a>
-		<a href="/results" class="tab"><span>
-				RESULTS &amp; SCHEDULE
-		 
-		</span><div class="blenda2 anim4"></div></a>
-		<a href="/team" class="tab"><span>
-				TEAM
-		 
-		</span><div class="blenda2 anim4"></div></a>
-		<a href="/media" class="tab"><span>
-				GALLERY
-		 
-		</span><div class="blenda2 anim4"></div></a>
-		<a href="/awards" class="tab"><span>
-				AWARDS
-		 
-		</span><div class="blenda2 anim4"></div></a>
-				
-	 </div>
-  </div>	
 	
-  <div class="media">
-    <div class="content wrap">
-    <h1 ng-click="showDialog()">
-			News
-	  </h1>
-	  <img src="/images/results/delim2.png" width="986" height="1" border="0" class="delim">
+  <div class="container">
+    <div class="content">
+    <h1>News</h1>
 	  <div class="clear"></div>
-		
 	  <div class="box">
-          <div masonry column-width="110">
-              <div class="grid-sizer"></div>
-              <div class="masonry-brick" ng-class="largePost(post)" ng-repeat="post in feed.data">
-              <h2>{{post.created_time | moment: 'YYYY-MM-DDTHH:mm:ss Z': 'MMMM DD, YYYY'}}</h2>
-              <div ng-switch="post.type">
-                  <div ng-switch-when="status">
-                    <div class="postData" post="{{post.message}}"></div>
-                    <div ng-show="post.link">- <a href="{{post.link}}">see more</a></div>
-                  </div>
-                  <div ng-switch-when="link">
-                    <div class="postData">
-                      {{post.story}} 
+          <div>
+              <div class="article" ng-repeat="post in feed.data">
+                <h2>{{post.created_time | moment: 'YYYY-MM-DDTHH:mm:ss Z': 'MMMM DD, YYYY'}}</h2>
+                <div ng-switch="post.type">
+                    <div ng-switch-when="status">
+                      <div class="postData" post="{{post.message}}"></div>
+                      <div ng-show="post.link">- <a href="{{post.link}}">see more</a></div>
                     </div>
-                    <div ng-show="post.link">- <a href="{{post.link}}">see more</a></div>
-                  </div>
-                  <div ng-switch-when="photo">
-                    <img ng-src="{{post.picture | full: 'n'}}">
-                    <div class="postData" post="{{post.message}}"></div>
-                    <div ng-show="post.link">- <a href="{{post.link}}">see more</a></div>
-                  </div>
-	              <img src="/images/results/delim2.png" width="986" height="1" border="0" class="delim">
-              </div>
+                    <div ng-switch-when="link">
+                      <div class="postData">
+                        {{post.story}} 
+                      </div>
+                      <div ng-show="post.link">- <a href="{{post.link}}">see more</a></div>
+                    </div>
+                    <div ng-switch-when="photo">
+                      <img ng-src="{{post.picture | full: 'n'}}">
+                      <div class="postData" post="{{post.message}}"></div>
+                      <div ng-show="post.link">- <a href="{{post.link}}">see more</a></div>
+                    </div>
+  	              <img src="/images/results/delim2.png" width="986" height="1" border="0" class="delim">
+                </div>
             </div>
           </div>
        <!-- <div id="singlenews">
