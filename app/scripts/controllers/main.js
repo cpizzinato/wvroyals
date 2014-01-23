@@ -24,6 +24,7 @@ app.controller('MainCtrl', function($scope, $window, $location) {
 
 });
 
+<<<<<<< HEAD
 app.controller('HomeCtrl', function($scope, playerService, ngProgressLite) {
 
   ngProgressLite.start();
@@ -32,6 +33,15 @@ app.controller('HomeCtrl', function($scope, playerService, ngProgressLite) {
     ngProgressLite.done();
   });
 
+=======
+app.controller('MenuCtrl', function($scope, $routeParams, $location) {
+  var loc = $location.path().substr(1,$location.path().length);
+  angular.element('a.active').removeClass('active');
+  angular.element('a#'+loc).addClass('active');
+});
+
+app.controller('MobileCtrl', function($scope) {
+>>>>>>> 3656ac9cd360ce8008c369001a2d70d25821c780
 });
 
 
